@@ -57,6 +57,8 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    # Verify npm version:
    npm -v # Should print "10.9.2".
 
+   # Install git and clone the repo
+   sudo yum install git -y
    git clone https://github.com/UnpredictablePrashant/TravelMemory
    ```
 4. Navigate to backend folder and create .env file and install the dependencies of the application.
@@ -132,6 +134,8 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    # Verify npm version:
    npm -v # Should print "10.9.2".
 
+   # Install git and clone the repo
+   sudo yum install git -y
    git clone https://github.com/UnpredictablePrashant/TravelMemory
    ```
 4. Navigate to frontend folder and create .env file and install the dependencies of the application.
