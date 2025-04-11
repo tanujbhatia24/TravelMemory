@@ -198,10 +198,19 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
 
 ### Load Balancing & Scaling
 
-1. Create AMIs for both frontend and backend instances.
-2. Launch multiple instances using those AMIs.
-3. Create Target Groups in EC2 for frontend and backend.
-4. Create Application Load Balancers and assign target groups.
+1. Create AMIs for both frontend and backend instances.<br>
+   <img width="823" alt="image" src="https://github.com/user-attachments/assets/75af8ffc-001c-427d-997f-d1d09e5a2846" /><br>
+2. Launch backend & frontend instances using these AMIs.<br>
+   <img width="957" alt="image" src="https://github.com/user-attachments/assets/959d9791-9771-4fa9-aac4-3b26bb42a1af" /><br>
+3. For Load Balancing, create Target Groups for frontend and backend.<br>
+   <img width="429" alt="image" src="https://github.com/user-attachments/assets/dd9356cd-e1c2-42fc-9d43-3b13991fb37f" /><br>
+   <img width="398" alt="image" src="https://github.com/user-attachments/assets/fd619d7f-ceb8-4fec-ad6e-020c45ca1c2b" /><br>
+4. Create Application Load Balancers and assign target groups.<br>
+   NOTE : Make sure the Load balancer is mapped to multi AZs
+   <img width="959" alt="image" src="https://github.com/user-attachments/assets/d737c3c2-d550-48b0-8821-13bf94450d4a" /><br>
+   ![image](https://github.com/user-attachments/assets/b5a9b575-d518-423c-aa21-425d820da886)<br>
+
+   
 5. Verify traffic distribution and availability.
 
 ---
