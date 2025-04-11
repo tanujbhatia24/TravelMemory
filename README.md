@@ -70,7 +70,7 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
 4. Navigate to backend folder and create .env file and install the dependencies of the application.
    ```bash
    # Go to backend directory
-   cd TravelMemory/backend
+   cd ~/TravelMemory/backend
 
    # create .env file
    sudo nano .env
@@ -107,7 +107,7 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    sudo systemctl restart nginx
    sudo systemctl nginx -t #to validate nginx config file
    ```
-   start the nodejs application.
+   Start the nodejs application.
    ```bash
    node index.js
    ```
@@ -167,12 +167,7 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    ```
    <img width="516" alt="image" src="https://github.com/user-attachments/assets/9540d27f-93b5-449d-be90-ab350d3883da" />
 
-7. Run:
-   ```bash
-   npm install
-   npm start
-   ```
-8. Set up Nginx for frontend just like backend.
+7. Setup Nginx reverse proxy on port 80 for frontend just like backend.
    ```bash
    sudo yum install nginx -y
    sudo systemctl enable nginx
@@ -193,7 +188,12 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    sudo systemctl restart nginx
    sudo systemctl nginx -t #to validate nginx config file
    ```
-
+   Start the application
+   ```bash
+   npm start
+   ```
+8. Now we can access the application at port 80 because of reverse proxy.
+   <img width="450" alt="image" src="https://github.com/user-attachments/assets/fae03525-5226-4720-927a-3c1973561a0e" />
 ---
 
 ### Load Balancing & Scaling
