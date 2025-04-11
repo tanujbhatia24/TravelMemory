@@ -213,7 +213,7 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    e.g. - Subdomain: api.tanujbhatia.site.<br>
    
 2. Create a CNAME record pointing to the load balancer endpoint.<br>
-   <img width="796" alt="image" src="https://github.com/user-attachments/assets/85fd9ef4-10a5-4013-8391-4a6c9f359775" />
+   <img width="446" alt="image" src="https://github.com/user-attachments/assets/36cab0cd-c2c6-4c7a-b60d-f65bb64bca30" />
 
 3. Update .env & urls.js in frontend to use your new domain/subdomain.
    ```bash
