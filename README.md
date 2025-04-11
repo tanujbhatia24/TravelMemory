@@ -72,15 +72,16 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    # Go to backend directory
    cd ~/TravelMemory/backend
 
-   # create .env file
+   # Create .env file
    sudo nano .env
 
    # Put the following content (remember to change it based on your requirements)
    MONGO_URI=your_mongo_uri
    PORT=3000
 
-   # install the dependencies
+   # Install & Build the dependencies
    sudo npm install
+   sudo npm run build
    ```
 5. Start the backend application at port 3000 and validate.<br>
    <img width="511" alt="image" src="https://github.com/user-attachments/assets/3e964302-bc01-4b36-9e89-5398ec45de4d" /><br>
@@ -148,7 +149,7 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    sudo nano .env
 
    # Put the following content (remember to change it based on your requirements): 
-   REACT_APP_BACKEND_URL=http://backend_server_ip
+   REACT_APP_BACKEND_URL=http://backend_server_ip #eg. - http://3.110.217.207
 
    # install the dependencies
    sudo npm install
@@ -209,22 +210,33 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    NOTE : Make sure the Load balancer is mapped to multi AZs
    <img width="959" alt="image" src="https://github.com/user-attachments/assets/d737c3c2-d550-48b0-8821-13bf94450d4a" /><br>
    ![image](https://github.com/user-attachments/assets/b5a9b575-d518-423c-aa21-425d820da886)<br>
-
-   
-5. Verify traffic distribution and availability.
-
 ---
 
 ### Custom Domain Setup Using Cloudflare
 
-1. Domain: tanujbhatia.site.
-2. Subdomain: api.tanujbhatia.site.
-3. Add:
-    1. CNAME record pointing to Load Balancer DNS.
-    2. A record (if necessary) pointing to frontend instance IP
+1. Connect your domain & sudomain to the application using Cloudflare.<br> 
+   e.g. - Domain: tanujbhatia.site.<br>
+   e.g. - Subdomain: api.tanujbhatia.site.<br>
+   
+2. Create a CNAME record pointing to the load balancer endpoint.<br>
+   <img width="796" alt="image" src="https://github.com/user-attachments/assets/85fd9ef4-10a5-4013-8391-4a6c9f359775" />
 
-Update .env & urls.js in frontend to use your new domain/subdomain.
+3. Update .env & urls.js in frontend to use your new domain/subdomain.
+   ```bash
+   # Go to frontend directory
+   cd ~/TravelMemory/frontend
 
+   # Create .env file
+   sudo nano .env
+
+   # Put the following content (remember to change it based on your requirements): 
+   REACT_APP_BACKEND_URL=http://backend_api_url #e.g. - http://api.tanujbhatia.site
+
+   # Build the dependencies
+   sudo npm run build
+   ```
+4. Now we can access the application using subdomain because of DNS settings.<br>
+   
 ---
 
 ### Deployment Status
