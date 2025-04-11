@@ -1,16 +1,11 @@
 # Travel Memory Application
 
-[![Deployment](https://img.shields.io/badge/Deployed-EC2-green.svg)](#deployment-status)
-[![Made With](https://img.shields.io/badge/Made%20With-MERN-blueviolet)](#tech-stack)
-
 A full-stack travel memory journal web app built using the **MERN stack**, deployed on **AWS EC2**, and load-balanced with custom domain management via **Cloudflare**.
-
 ---
 
 ## Repository
 
 🔗 [GitHub: Travel Memory App](https://github.com/UnpredictablePrashant/TravelMemory)
-
 ---
 
 ## Features
@@ -21,7 +16,6 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
 - MongoDB Atlas database.
 - Nginx reverse proxy for port management.
 - Domain setup with Cloudflare (e.g. `tanujbhatia.site`).
-
 ---
 
 ## Tech Stack
@@ -32,14 +26,12 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
 - **Cloud**: AWS EC2, Load Balancer, AMI, VPC
 - **DNS**: Cloudflare
 - **Web Server**: Nginx
-
 ---
 
 ### Prerequisites
 1. Ensure backend IP is whitelisted in MongoDB Atlas.
 2. All EC2 instances used were launched in ap-south-1 (Mumbai) region.
 3. Snapshots (AMIs) can be reused for creating instances & scailing.
-
 ---
 
 ## Quick Deployment Guide
@@ -248,7 +240,6 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    
    The data get stored in the MongoDB database.<br>
    ![image](https://github.com/user-attachments/assets/35a49355-3ec9-4dd5-8c9a-8f520830fc55)
-
 ---
 
 ### Deployment Status
