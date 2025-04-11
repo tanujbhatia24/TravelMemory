@@ -81,7 +81,9 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
 
    # Install & Build the dependencies
    sudo npm install
-   sudo npm run build
+
+   # Start the application
+   sudo node index.js
    ```
 5. Start the backend application at port 3000 and validate.<br>
    <img width="511" alt="image" src="https://github.com/user-attachments/assets/3e964302-bc01-4b36-9e89-5398ec45de4d" /><br>
@@ -234,7 +236,13 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
 
    # Build the dependencies
    sudo npm run build
+
+   # Start the application
+   sudo npm start
    ```
+   ![image](https://github.com/user-attachments/assets/f12ae51c-e6ed-4e85-bb9f-41fa3911672d)<br>
+   <img width="956" alt="image" src="https://github.com/user-attachments/assets/4d37bc15-44a2-4c4a-af48-a2d4630c58f6" /><br>
+
 4. Now we can access the application using subdomain because of DNS settings.<br>
    
 ---
