@@ -102,7 +102,7 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    ```bash
    sudo systemctl reload nginx
    sudo systemctl restart nginx
-   sudo systemctl nginx -t #to validate nginx config file
+   sudo nginx -t #to validate nginx config file
    ```
    Start the nodejs application.
    ```bash
@@ -185,7 +185,7 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    ```bash
    sudo systemctl reload nginx
    sudo systemctl restart nginx
-   sudo systemctl nginx -t #to validate nginx config file
+   sudo nginx -t #to validate nginx config file
    ```
    Start the application
    ```bash
