@@ -67,7 +67,7 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
 
    git clone https://github.com/UnpredictablePrashant/TravelMemory
    ```
-4. Create .env file and install the dependencies of the application.
+4. Navigate to backend folder and create .env file and install the dependencies of the application.
    ```bash
    # Go to backend directory
    cd TravelMemory/backend
@@ -123,7 +123,7 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    Private IP - 172.31.25.183
    ![image](https://github.com/user-attachments/assets/b02f329a-7981-400f-8872-1b44fc39dbd8)
 
-3. Install Node.js, clone the same repository and navigate to frontend folder.
+3. Install Node.js, clone the same repository.
    ```bash
    # Download and install fnm:
    curl -o- https://fnm.vercel.app/install | bash
@@ -139,24 +139,40 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
 
    git clone https://github.com/UnpredictablePrashant/TravelMemory
    ```
-4. Create .env file.
+4. Navigate to frontend folder and create .env file and install the dependencies of the application. Create .env file.
    ```bash
-   # Got to frontend directory
-   cd TravelMemory/frontend
+   # Go to frontend directory
+   cd ~/TravelMemory/frontend
 
    # create .env file
    sudo nano .env
 
    # Put the following content (remember to change it based on your requirements): 
-   REACT_APP_BACKEND_URL=http://localhost](http://localhost:3001
+   REACT_APP_BACKEND_URL=http://backend_server_ip
+
+   # install the dependencies
+   sudo npm install
    ```
 5. Update urls.js with backend IP or domain.
-6. Run:
+   ```bash
+   # Go to frontend/src directory
+   cd ~/TravelMemory/frontend/src
+   
+   # Put the following content (remember to change it based on your requirements): 
+   export const baseUrl = process.env.REACT_APP_BACKEND_URL #Calling the value from .env file directy using variable "REACT_APP_BACKEND_URL"
+   ```
+6. Start the frontend application at port 3000 and validate.
+   ```bash
+   npm start
+   ```
+   <img width="516" alt="image" src="https://github.com/user-attachments/assets/9540d27f-93b5-449d-be90-ab350d3883da" />
+
+7. Run:
    ```bash
    npm install
    npm start
    ```
-7. Set up Nginx for frontend just like backend.
+8. Set up Nginx for frontend just like backend.
    ```bash
    sudo yum install nginx -y
    sudo systemctl enable nginx
