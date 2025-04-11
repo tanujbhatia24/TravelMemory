@@ -209,8 +209,8 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
 ### Custom Domain Setup Using Cloudflare
 
 1. Connect your domain & sudomain to the application using Cloudflare.<br> 
-   e.g. - Domain: tanujbhatia.site.<br>
-   e.g. - Subdomain: api.tanujbhatia.site.<br>
+   e.g. - Domain: tanujbhatia.site<br>
+   e.g. - Subdomain: api.tanujbhatia.site<br>
    
 2. Create a CNAME record pointing to the load balancer endpoint.<br>
    <img width="446" alt="image" src="https://github.com/user-attachments/assets/36cab0cd-c2c6-4c7a-b60d-f65bb64bca30" />
