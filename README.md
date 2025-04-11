@@ -113,7 +113,7 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
 
 ### Frontend Setup
 
-1. Launch separate EC2 instances for frontend.<br>
+1. Launch separate EC2 instances (Linux) for frontend.<br>
    Public IP - 43.205.91.11<br>
    Private IP - 172.31.25.183
    ![image](https://github.com/user-attachments/assets/b02f329a-7981-400f-8872-1b44fc39dbd8)
