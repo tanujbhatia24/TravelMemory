@@ -151,7 +151,7 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    REACT_APP_BACKEND_URL=http://backend_server_ip #eg. - http://3.110.217.207
 
    # install the dependencies
-   sudo npm install
+   npm install
    ```
 5. Update urls.js with backend IP or domain.
    ```bash
@@ -163,6 +163,7 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    ```
 6. Start the frontend application at port 3000 and validate.
    ```bash
+   npm run build
    npm start
    ```
    <img width="516" alt="image" src="https://github.com/user-attachments/assets/9540d27f-93b5-449d-be90-ab350d3883da" />
@@ -189,8 +190,9 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    sudo systemctl restart nginx
    sudo nginx -t #to validate nginx config file
    ```
-   Start the application
+   Build and start the application
    ```bash
+   npm run build
    npm start
    ```
 8. Now we can access the application at port 80 because of reverse proxy.<br>
@@ -233,7 +235,7 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    REACT_APP_BACKEND_URL=http://backend_api_url #e.g. - http://api.tanujbhatia.site
 
    # Build the dependencies
-   sudo npm run build
+   npm run build
 
    # Start the application
    sudo npm start
