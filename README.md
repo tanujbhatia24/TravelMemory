@@ -93,6 +93,7 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    ```bash
    server {
     listen 80;
+    server_name _;
     location / {
         proxy_pass http://localhost:3000;
      }
@@ -176,6 +177,7 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    ```bash
    server {
     listen 80;
+    server_name _;
     location / {
         proxy_pass http://localhost:3000;
      }
