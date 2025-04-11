@@ -240,9 +240,15 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    # Start the application
    sudo npm start
    ```
-4. Now we can access the application using subdomain because of DNS settings.<br>
+4. Now we can access the application using domain name because of DNS settings.<br>
    ![image](https://github.com/user-attachments/assets/f12ae51c-e6ed-4e85-bb9f-41fa3911672d)<br>
+
+   Click on "Add Experience" and enter new data through UI.<br>
    <img width="956" alt="image" src="https://github.com/user-attachments/assets/4d37bc15-44a2-4c4a-af48-a2d4630c58f6" /><br>
+   
+   The data get stored in the MongoDB database.<br>
+   ![image](https://github.com/user-attachments/assets/35a49355-3ec9-4dd5-8c9a-8f520830fc55)
+
 ---
 
 ### Deployment Status
