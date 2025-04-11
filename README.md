@@ -192,7 +192,7 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    ```bash
    npm start
    ```
-8. Now we can access the application at port 80 because of reverse proxy.
+8. Now we can access the application at port 80 because of reverse proxy.<br>
    <img width="450" alt="image" src="https://github.com/user-attachments/assets/fae03525-5226-4720-927a-3c1973561a0e" />
 ---
 
