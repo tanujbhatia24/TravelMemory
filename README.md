@@ -38,7 +38,7 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
 ### Prerequisites
 1. Ensure backend IP is whitelisted in MongoDB Atlas.
 2. All EC2 instances used were launched in ap-south-1 (Mumbai) region.
-3. Snapshots (AMIs) can be reused for scaling.
+3. Snapshots (AMIs) can be reused for creating instances & scailing.
 
 ---
 
@@ -46,9 +46,12 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
 
 ### Backend Setup
 
-1. Launch EC2 Instances.
-2. Install Node.js and clone repo.
+1. Launch EC2 Instance (Linux) for backend setup.<br>
+   Public IP - 3.110.217.207<br>
+   Private IP - 172.31.4.142
+   ![image](https://github.com/user-attachments/assets/e6477b84-4ff0-4e42-8031-db698d79636d)
 
+3. Install Node.js and clone repo.
    ```bash
    # Download and install fnm:
    curl -o- https://fnm.vercel.app/install | bash
@@ -64,21 +67,26 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
 
    git clone https://github.com/UnpredictablePrashant/TravelMemory
    ```
-3. Create .env file.
+4. Create .env file and install the dependencies of the application.
    ```bash
-   # Got to backend directory
+   # Go to backend directory
    cd TravelMemory/backend
 
-   # Put the following content (remember to change it based on your requirements): 
+   # create .env file
+   sudo nano .env
+
+   # Put the following content (remember to change it based on your requirements)
    MONGO_URI=your_mongo_uri
    PORT=3000
+
+   # install the dependencies
+   sudo npm install
    ```
-4. Install and start.
-   ```bash
-   npm install
-   node index.js
-   ```
-5. Setup Nginx reverse proxy on port 80.
+5. Start the backend application at port 3000 and validate.<br>
+   <img width="511" alt="image" src="https://github.com/user-attachments/assets/3e964302-bc01-4b36-9e89-5398ec45de4d" /><br>
+   <img width="532" alt="image" src="https://github.com/user-attachments/assets/026f1b94-4cc4-4a2d-819b-2bfc3768df02" /><br>
+    
+6. Setup Nginx reverse proxy on port 80.
    ```bash
    sudo yum install nginx -y
    sudo systemctl enable nginx
@@ -99,28 +107,56 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
    sudo systemctl restart nginx
    sudo systemctl nginx -t #to validate nginx config file
    ```
-
+   start the nodejs application.
+   ```bash
+   node index.js
+   ```
+7. Now we can access the application at port 80 because of reverse proxy.<br>
+   <img width="514" alt="image" src="https://github.com/user-attachments/assets/def014a6-099b-42ab-8064-3b572bb4c862" /><br>
+   <img width="527" alt="image" src="https://github.com/user-attachments/assets/232d9e0e-2f04-406d-846b-abb3c3fa7b3f" />
 ---
 
 ### Frontend Setup
 
-1. Launch separate EC2 instances for frontend.
-2. Clone the same repository and navigate to frontend folder.
-3. Create .env file.
+1. Launch separate EC2 instances for frontend.<br>
+   Public IP - 43.205.91.11<br>
+   Private IP - 172.31.25.183
+   ![image](https://github.com/user-attachments/assets/b02f329a-7981-400f-8872-1b44fc39dbd8)
+
+3. Install Node.js, clone the same repository and navigate to frontend folder.
+   ```bash
+   # Download and install fnm:
+   curl -o- https://fnm.vercel.app/install | bash
+   
+   # Download and install Node.js:
+   fnm install 22
+   
+   # Verify the Node.js version:
+   node -v # Should print "v22.14.0".
+   
+   # Verify npm version:
+   npm -v # Should print "10.9.2".
+
+   git clone https://github.com/UnpredictablePrashant/TravelMemory
+   ```
+4. Create .env file.
    ```bash
    # Got to frontend directory
    cd TravelMemory/frontend
 
+   # create .env file
+   sudo nano .env
+
    # Put the following content (remember to change it based on your requirements): 
-   REACT_APP_BACKEND_URL=http://api.tanujbhatia.site
+   REACT_APP_BACKEND_URL=http://localhost](http://localhost:3001
    ```
-4. Update urls.js with backend IP or domain.
-5. Run:
-```bash
-npm install
-npm start
-```
-6. Set up Nginx for frontend just like backend.
+5. Update urls.js with backend IP or domain.
+6. Run:
+   ```bash
+   npm install
+   npm start
+   ```
+7. Set up Nginx for frontend just like backend.
    ```bash
    sudo yum install nginx -y
    sudo systemctl enable nginx
