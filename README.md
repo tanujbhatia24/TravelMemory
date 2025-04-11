@@ -134,7 +134,7 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
 
    git clone https://github.com/UnpredictablePrashant/TravelMemory
    ```
-4. Navigate to frontend folder and create .env file and install the dependencies of the application. Create .env file.
+4. Navigate to frontend folder and create .env file and install the dependencies of the application.
    ```bash
    # Go to frontend directory
    cd ~/TravelMemory/frontend
