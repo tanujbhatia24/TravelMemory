@@ -29,9 +29,10 @@ A full-stack travel memory journal web app built using the **MERN stack**, deplo
 ---
 
 ### Prerequisites
-1. Ensure backend IP is whitelisted in MongoDB Atlas.
-2. All EC2 instances used were launched in ap-south-1 (Mumbai) region.
-3. Snapshots (AMIs) can be reused for creating instances & scailing.
+1. Ensure the backend EC2 public IP is whitelisted in MongoDB Atlas.
+2. All EC2 instances should be launched in the ap-south-1 (Mumbai) region.
+3. Use AMI snapshots to easily replicate and scale frontend/backend instances.
+4. Ensure that Port 80 (HTTP) is open in the EC2 Security Group to allow incoming web traffic.
 ---
 
 ## Quick Deployment Guide
